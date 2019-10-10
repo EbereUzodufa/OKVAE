@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HNG</title>
-	<meta name="description" content="FAQ page for HNG Page">
-	<link rel='manifest' href='./manifest.json'>
-	<link rel="apple-touch-icon" href="./logo.png">
+    <meta name="description" content="FAQ page for HNG Page">
+    <link rel='manifest' href='./manifest.json'>
+    <link rel="apple-touch-icon" href="./logo.png">
     <meta name="theme-color" content="#011B33">
-    <link rel="icon"  href="./logo.png">
+    <link rel="icon" href="./logo.png">
     <style>
         section#faq .accordion-item-text-container {
             display: none;
             padding: 1rem 3rem;
             margin: 0;
         }
-
-        section#faq .accordion-item-text-container, button.accordion-item-title {
+        
+        section#faq .accordion-item-text-container,
+        button.accordion-item-title {
             padding: 1.5rem;
         }
-
-        section#faq .accordion-item-text-container p{
+        
+        section#faq .accordion-item-text-container p {
             font-family: "Gilroy-Medium", san-serif;
             font-style: normal;
             font-weight: normal;
@@ -30,7 +32,7 @@
             margin: 0;
             padding: 0;
         }
-
+        
         section#faq div.accordion-item {
             width: 100%;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -39,12 +41,12 @@
             padding: 0;
             border-radius: .4rem .4rem 0 0;
         }
-
+        
         section#faq button.accordion-item-title {
             background-color: #011B33;
             border-radius: .4rem .4rem 0 0;
             /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-            margin:0;
+            margin: 0;
             color: #fff;
             width: 100%;
             text-align: left;
@@ -55,7 +57,7 @@
             font-size: 28px;
             line-height: 34px;
         }
-
+        
         section#faq div#faq-container {
             width: 90%;
             max-width: 941px;
@@ -63,17 +65,17 @@
             display: flex;
             flex-wrap: wrap;
         }
-
+        
         button.accordion-item-title {
             display: flex;
             flex-wrap: wrap;
         }
-
+        
         span.btn-text {
             width: calc(100% - 40px);
             max-width: calc(100% - 40px);
         }
-
+        
         button span.btn-icon {
             float: right;
             margin: auto 5px;
@@ -88,14 +90,95 @@
             font-weight: 800;
             font-size: 26px;
         }
+        
         span.btn-icon.open-accordion {
             transform: rotate(180deg);
+        }
+        /*CSS FOR CONTACT US SECTION*/
+        
+        .Contact-Us-Heading {
+            color: #084482;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 29px;
+            line-height: 33px;
+            text-align: center;
+            position: absolute;
+            width: 640px;
+            height: 106px;
+            left: 400px;
+            top: 2068px;
+        }
+        
+        #Name {
+            background: #FFFFFF;
+            border: 1px solid #868686;
+            box-sizing: border-box;
+            position: absolute;
+            width: 1110px;
+            height: 50px;
+            left: 165px;
+            top: 2258px;
+        }
+        
+        #email {
+            background: #FFFFFF;
+            border: 1px solid #868686;
+            box-sizing: border-box;
+            position: absolute;
+            width: 1110px;
+            height: 50px;
+            left: 165px;
+            top: 2334px;
+        }
+        
+        #Subject {
+            position: absolute;
+            width: 1110px;
+            height: 50px;
+            left: 165px;
+            top: 2410px;
+            background: #FFFFFF;
+            border: 1px solid #868686;
+            box-sizing: border-box;
+        }
+        
+        #Message {
+            position: absolute;
+            width: 1110px;
+            height: 297px;
+            left: 165px;
+            top: 2486px;
+            background: #FFFFFF;
+            border: 1px solid #868686;
+            box-sizing: border-box;
+        }
+        
+        .submit {
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 1.96%;
+            background: #00AEFF;
+            box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 29px;
+            line-height: 22px;
+            /* identical to box height */
+            text-align: center;
+            letter-spacing: 0.315px;
+            color: #FFFFFF;
         }
     </style>
 </head>
 
 <body>
-	<main>
+    <main>
         <section id="faq">
             <div class="text-center">
                 <h1>Frequently Asked Questions</h1>
@@ -103,84 +186,120 @@
             </div>
             <div id="faq-container" class="container-fluid"></div>
             <form action="">
-                
+
             </form>
+            <!--Contact US-->
         </section>
-	</main>
+    </main>
+    <section>
+        <div class="Contact-Us-Heading">
+            <h1>
+                Not a Frequently Asked Question?
+            </h1>
+            <h1>
+                Contact Us below
+            </h1>
+        </div>
+        <div class="table">
+            <form action="/action_page.php" class="label">
+
+                <input pattern=".{4,20}" type="text" name="name" id="Name" placeholder="Name" required title="4 to 20 characters"><br>
+
+                <input pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" type="text" name="email" id="email" placeholder="Email" required title="email address"><br>
+
+                <input pattern=".{20,100}" type="varchar" name="Subject" id="Subject" placeholder="Subject" required title="20 to 100 characters"><br>
+
+                <textarea maxlength="250" minlength="20" name="Message" id="Message" cols="30" rows="10" placeholder="Write A Message" required title="20 to 250 characters">Write A Message</textarea>
+            </form>
+            <br>
+            <br>
+            <br>
+            <button type="submit" class="submit">Send Message</button>
+        </div>
+    </section>
+</body>
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+</script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-	const getFaqData = () =>{
-		//Fetch data from, for now a json
-		//Then using promise to complete other actions
-		fetch('/data/faq.json')
-		  .then(res=>res.json())
-		  .then(getFaqs)
-		  .then(()=>{btnListener()})
-		  .catch(err=> console.log(err));
-	}
+    const getFaqData = () => {
+        //Fetch data from, for now a json
+        //Then using promise to complete other actions
+        fetch('/data/faq.json')
+            .then(res => res.json())
+            .then(getFaqs)
+            .then(() => {
+                btnListener()
+            })
+            .catch(err => console.log(err));
+    }
 
-	const getFaqs = (data) =>{
-		const faqs = data.faq;
-		// console.log('faqs', faqs);
-		makeFaqHTML(faqs);
-	}
+    const getFaqs = (data) => {
+        const faqs = data.faq;
+        // console.log('faqs', faqs);
+        makeFaqHTML(faqs);
+    }
 
-	const makeFaqHTML = (faqs) =>{
-		const divFaq = document.querySelector('div#faq-container');
-		const frag = document.createDocumentFragment(); //savin some performance cost with Fragment
-		faqs.forEach(faq => {
-			//Create Elements
-			const div = document.createElement("div");
-			const divAccText = document.createElement("div");
-			const button = document.createElement("button");
-			const p = document.createElement("p");
-			const spanText = document.createElement("span");
-			const spanIcon = document.createElement("span");
+    const makeFaqHTML = (faqs) => {
+        const divFaq = document.querySelector('div#faq-container');
+        const frag = document.createDocumentFragment(); //savin some performance cost with Fragment
+        faqs.forEach(faq => {
+            //Create Elements
+            const div = document.createElement("div");
+            const divAccText = document.createElement("div");
+            const button = document.createElement("button");
+            const p = document.createElement("p");
+            const spanText = document.createElement("span");
+            const spanIcon = document.createElement("span");
 
-			//Adding classes
-			div.classList.add('accordion-item');
-			button.classList.add('accordion-item-title');
-			p.classList.add('accordion-item-text');
-			divAccText.classList.add('accordion-item-text-container');
-			spanIcon.classList.add('btn-icon');
-			spanText.classList.add('btn-text');
+            //Adding classes
+            div.classList.add('accordion-item');
+            button.classList.add('accordion-item-title');
+            p.classList.add('accordion-item-text');
+            divAccText.classList.add('accordion-item-text-container');
+            spanIcon.classList.add('btn-icon');
+            spanText.classList.add('btn-text');
 
-			spanText.innerHTML = faq.title;
-			spanIcon.innerHTML = "˅";
-			p.innerHTML = faq.text;
+            spanText.innerHTML = faq.title;
+            spanIcon.innerHTML = "˅";
+            p.innerHTML = faq.text;
 
-			button.append(spanText);
-			button.append(spanIcon);
+            button.append(spanText);
+            button.append(spanIcon);
 
-			divAccText.append(p);
+            divAccText.append(p);
 
-			div.append(button);
-			div.append(divAccText);
+            div.append(button);
+            div.append(divAccText);
 
-			frag.append(div);
-		});
+            frag.append(div);
+        });
 
-		//Now append to FAQ div
-		divFaq.append(frag);
-	}
+        //Now append to FAQ div
+        divFaq.append(frag);
+    }
 
-	const btnListener = () =>{
-		$("button.accordion-item-title").click(function(){
-			// ES6 class doesnt work with jQ
-			// console.log($(this));
-			
-			$(this).next().toggle("slow");
-			if($(this).children(".btn-icon").hasClass("open-accordion")){
-				$(this).children(".btn-icon").removeClass("open-accordion");
-			}else{
-				$(this).children(".btn-icon").addClass("open-accordion");
-			}
-		})
-	}
+    const btnListener = () => {
+        $("button.accordion-item-title").click(function() {
+            // ES6 class doesnt work with jQ
+            // console.log($(this));
 
-	document.addEventListener("DOMContentLoaded", () =>{
-		getFaqData();
-	});
+            $(this).next().toggle("slow");
+            if ($(this).children(".btn-icon").hasClass("open-accordion")) {
+                $(this).children(".btn-icon").removeClass("open-accordion");
+            } else {
+                $(this).children(".btn-icon").addClass("open-accordion");
+            }
+        })
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        getFaqData();
+    });
 </script>
+
 </html>
